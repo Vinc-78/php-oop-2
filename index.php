@@ -14,11 +14,11 @@ echo '<br> <br>';
 $transazione [] = $id;
 
 /* Cliente */
-$newAquirente = new Acquirente('Mario', 'Arancio', 'MarAr12', 'mario.arancio@email.it', 'dsdgs');
+$newAquirente = new Acquirente('Mario', 'Arancio', 'mario.arancio@email.it', 'dsdgs','tnt','mattino');
 
-$newAquirente->addVettore("tnt");
+/* $newAquirente->addVettore("tnt");
 
-$newAquirente->addTime("mattino");
+$newAquirente->addTime("mattino"); */
 
 var_dump($newAquirente);
 

@@ -8,9 +8,9 @@ class Prodotto {
     
 
     public function __construct(string $nome, string $prezzo, string $categoria, $quantità) {
-        $this->name = $nome;
-        $this->price = $prezzo;
-        $this->category = $categoria;
+        $this->nome = $nome;
+        $this->prezzo = $prezzo;
+        $this->categoria = $categoria;
         $this->quantita = $quantità;
         
     }
