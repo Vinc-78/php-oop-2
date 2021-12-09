@@ -15,6 +15,11 @@ $transazione [] = $id;
 
 /* Cliente */
 $newAquirente = new Acquirente('Mario', 'Arancio', 'MarAr12', 'mario.arancio@email.it', 'dsdgs');
+
+$newAquirente->addVettore("tnt");
+
+$newAquirente->addTime("mattino");
+
 var_dump($newAquirente);
 
 $transazione [] = $newAquirente;

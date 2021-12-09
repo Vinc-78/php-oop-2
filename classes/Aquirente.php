@@ -10,7 +10,7 @@ class Acquirente extends User {
     protected $creditCards = [];
 
     use TipoDiSpedizione;
-    
+
     public function addCreditCard(CreditCard $creditCard) {
         $this->creditCards = $creditCard;
     }
@@ -18,4 +18,6 @@ class Acquirente extends User {
     public function getCreditCard() {
         return $this->creditCards;
     }
+
+    
 }
