@@ -5,7 +5,7 @@ class CreditCard {
     protected $expireDate;
     private $cvc;
 
-    public function __construct(string $type, string $number,  string $expireDate, int $cvc) {
+    public function __construct(string $type, int $number,  string $expireDate, int $cvc) {
         
         $this->tipo = $type;
 
@@ -16,35 +16,34 @@ class CreditCard {
         
         
     }
-
+/* Se una delle seguenti condizioni non è rispettata da un fatal error */
     protected function getNumber($number){
         if (!is_int($number)) {
-            throw new Exception('Non è un numero valido');
+            throw new Exception ('Non è un numero valido');
             }
 
-        else{
-            $this->numero = $number;
-        }
+        return $this->numero = $number;
+        
 
     }
     protected function getValidita($expireDate){
-        if ($expireDate<date("Y")) {
+        if ( $expireDate < date("m/Y")) {
+
+            
             throw new Exception('Documento scaduto');
             }
-
-        else{
-            $this->expireDate = $expireDate;
-        }
+            var_dump(date("m/Y"));
+       return $this->expireDate = $expireDate;
+        
 
     }
     protected function getCode($cvc){
-        if (!is_int($cvc) && ($cvc<=999) && ($cvc>0)) {
+        if (!(is_int($cvc) && ($cvc<=999) && ($cvc>0))) {
             throw new Exception('Non è un numero valido');
             }
 
-        else{
-            $this->cvc = $cvc;
-        }
+        return $this->cvc = $cvc;
+        
         
 
     }

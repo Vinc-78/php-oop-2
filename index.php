@@ -25,8 +25,8 @@ var_dump($newAquirente);
 $transazione [] = $newAquirente;
 
 
-/* Metodo di pagamento: */
-$pagamento = new CreditCard('Visa', '987320232', '12/2080', 123);
+/* Metodo di pagamento: se uno degli argomenti passati non è corretto il " throw new Exception " blocca*/
+$pagamento = new CreditCard('Visa', 9873, '12/2021', 888);
 echo '<br> <br>';
 
 
